@@ -3,7 +3,7 @@
  'use strict';
  var chai = require('chai');
 var expect = chai.expect;
-var myminMax = require('../app/minmax.js');
+var findMinMax = require('../app/minmax.js').min_max;
 
 
 
@@ -17,7 +17,7 @@ var myminMax = require('../app/minmax.js');
 
      it('should return [1,4] for [1, 2, 3 , 4]', function () {
 
-       expect(myminMax.findMinMax([1, 2, 3, 4])).to.eql([1, 4]);
+       expect(findMinMax([1, 2, 3, 4])).to.eql([1, 4]);
 
      });
 
@@ -25,7 +25,7 @@ var myminMax = require('../app/minmax.js');
 
      it('should return [4, 6] for [6, 4]', function () {
 
-       expect(myminMax.findMinMax([6, 4])).to.eql([4, 6]);
+       expect(findMinMax([6, 4])).to.eql([4, 6]);
 
      });
 
@@ -33,7 +33,7 @@ var myminMax = require('../app/minmax.js');
 
      it('should return [2, 78] for [4, 66, 6, 44, 7, 78, 8, 68, 2]', function () {
 
-       expect(myminMax.findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).to.eql([2, 78]);
+       expect(findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).to.eql([2, 78]);
 
      });
 
@@ -49,7 +49,7 @@ var myminMax = require('../app/minmax.js');
 
      it('should return [4] for [4, 4, 4, 4]', function () {
 
-       expect(findMinMax([4, 4, 4, 4])).toEqual([4]);
+       expect(findMinMax([4, 4, 4, 4])).to.eql([4]);
 
      });
 
